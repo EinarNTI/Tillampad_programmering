@@ -17,7 +17,7 @@ void setup() {
   // put your setup code here, to run once:
   pinMode(sensorPin, INPUT);
   Serial.begin(9600);
-  u8g.setFont(u8g_font_unifont);
+  u8g.setFont(u8g_font_6x10);
 }
 
 void loop() {
@@ -71,7 +71,7 @@ void oledGraph(int meanData) {
   u8g.firstPage();  
   do {
     for (int i = 1; i < meansArrayLength; i++) {
-      u8g.drawPixel(i, map(meansArray[i-1], min, max, 0, 63));
+      u8g.drawLine(i - 1, map(meansArray[i-1], min, max, 0, 63), i, map(meansArray[i], min, max, 0, 63));
     }
   } while( u8g.nextPage() );
 }
