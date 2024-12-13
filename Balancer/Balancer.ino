@@ -10,6 +10,7 @@ Adafruit_MPU6050 mpu;
 const int xServoPin = 1;
 const int yServoPin = 2;
 const int zServoPin = 3;
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
