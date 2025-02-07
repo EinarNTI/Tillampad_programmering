@@ -79,7 +79,7 @@ float averageX(float in) {
   xArrayPos++;
 
   //Resets the position value if it is more than the array length
-  if (xArrayPos > xArrayLength - 1) { 
+  if (xArrayPos > xArrayLength) { 
     xArrayPos = 0;
   }
 
@@ -105,7 +105,7 @@ float averageY(float in) {
   yArrayPos++;
 
   //Resets the position value if it is more than the array length
-  if (yArrayPos > yArrayLength - 1) {
+  if (yArrayPos > yArrayLength) {
     yArrayPos = 0;
   }
 
