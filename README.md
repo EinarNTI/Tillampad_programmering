@@ -1,6 +1,6 @@
 # Tillampad_programmering
 
-# Stabilized Plane Project
+# Balancer Project
 
 **Author:** Einar Söderberg Beckman  
 **Date:** 2025-02-07  
@@ -49,6 +49,10 @@ This project is open-source. Feel free to modify and distribute.
 ## Acknowledgments
 - Adafruit for sensor libraries
 - Arduino community for inspiration
+
+
+
+
 
 
 # Clock and Temperature Display Project
