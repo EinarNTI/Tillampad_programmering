@@ -1,4 +1,56 @@
 # Tillampad_programmering
+
+# Stabilized Plane Project
+
+**Author:** Einar Söderberg Beckman  
+**Date:** 2025-02-07  
+
+## Overview
+This project uses two servo motors and an MPU6050 accelerometer to create a stabilized platform or plane. The servos adjust based on the accelerometer's measurements to maintain balance.
+
+## Components
+- **Servo Motors:** Two servo motors control the X and Y axes. (A third servo, `zServo`, is declared but not currently used.)
+- **MPU6050 Accelerometer:** Captures acceleration and gyroscopic data.
+- **Arduino Board:** Acts as the controller.
+
+## Libraries Used
+- `Servo.h` for controlling servo motors  
+- `Adafruit_MPU6050.h` and `Adafruit_Sensor.h` for interfacing with the MPU6050 sensor
+
+## Wiring
+- **X-Axis Servo:** Pin 2  
+- **Y-Axis Servo:** Pin 3  
+- **Z-Axis Servo:** Pin 4 (Unused)  
+- **MPU6050:** Connected via I2C (SDA, SCL pins on Arduino)
+
+## How It Works
+1. The MPU6050 collects data on the plane's orientation.
+2. Gyroscopic readings are converted from radians to degrees.
+3. Averages of the readings are calculated using arrays to smooth out fluctuations.
+4. The X and Y servos adjust their angles based on these averages.
+
+## Code Structure
+- **Setup:** Initializes serial communication, attaches servos, and configures the sensor.
+- **Loop:** Continuously reads data, calculates angles, and moves servos.
+- **`averageX()` & `averageY()`:** Store readings in arrays and return averaged values.
+
+## Installation and Usage
+1. Install the required libraries via the Arduino Library Manager:
+    - `Servo`
+    - `Adafruit MPU6050`
+    - `Adafruit Sensor`
+2. Connect the components as described.
+3. Upload the provided code to your Arduino board.
+4. Open the Serial Monitor to check sensor status.
+
+## License
+This project is open-source. Feel free to modify and distribute.
+
+## Acknowledgments
+- Adafruit for sensor libraries
+- Arduino community for inspiration
+
+
 # Clock and Temperature Display Project
 
 ### Author: Einar Söderberg Beckman  
